@@ -2,7 +2,11 @@
   "name": "client",
   "private": true,
   "version": "0.0.0",
+  "description": "",
   "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
