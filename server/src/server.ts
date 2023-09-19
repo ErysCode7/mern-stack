@@ -6,8 +6,6 @@ import express from "express";
 import connectDB from "./config/db-connection";
 import userRoutes from "./routes/users/user-routes";
 
-connectDB();
-
 const app = express();
 
 const PORT = process.env.PORT || 5000;
@@ -20,4 +18,5 @@ app.use("/users", userRoutes);
 
 app.listen(PORT, () => {
   console.log(`Port is running on ${PORT}`);
+  connectDB();
 });
