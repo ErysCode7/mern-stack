@@ -21,7 +21,10 @@
     "declaration": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "ts-node": {
     "esm": true,

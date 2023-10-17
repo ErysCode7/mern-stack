@@ -1,21 +1,23 @@
-import { config } from "dotenv";
-config();
-
+import { connectDB } from "@/config/database";
+import { userRoutes } from "@/routes/users";
 import cors from "cors";
+import { config } from "dotenv";
 import express from "express";
-import connectDB from "./config/db-connection";
-import userRoutes from "./routes/users/user-routes";
+
+config();
 
 const app = express();
 
 const PORT = process.env.PORT || 5000;
 
-// Use the cors middleware
+// MIDDLEWARES
 app.use(cors());
 app.use(express.json());
 
+// USERS ROUTES
 app.use("/users", userRoutes);
 
+// PORT
 app.listen(PORT, () => {
   console.log(`Port is running on ${PORT}`);
   connectDB();
