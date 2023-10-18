@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="h-20 bg-black">
+    <nav className="h-20 shadow-sm border-b bg-white">
       <div className="flex items-center h-full w-[85%] m-auto gap-5">
         {/* LOGO */}
         <div>
@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
         <ul className="flex items-center gap-5">
           {routes.map((route) => (
             <li key={route.id}>
-              <Link to={route.path} className="uppercase font-bold">
+              <Link to={route.path} className="uppercase font-bold text-black">
                 {route.text}
               </Link>
             </li>

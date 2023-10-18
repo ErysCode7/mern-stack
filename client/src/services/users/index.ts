@@ -1,3 +1,4 @@
+import { USERS_ENDPOINT_URL } from "@/utils/constants";
 import {
   QueryClient,
   QueryKey,
@@ -5,8 +6,6 @@ import {
   useQuery,
 } from "@tanstack/react-query";
 import axios from "axios";
-
-const BASE_URL = "http://localhost:8000/users";
 
 type Users = {
   _id: number | string;
@@ -20,7 +19,7 @@ const queryClient = new QueryClient();
 export const useUsers = () => {
   const getUsers = async (): Promise<Users[]> => {
     try {
-      const response = await axios.get(BASE_URL);
+      const response = await axios.get(USERS_ENDPOINT_URL);
       const { data = {} } = response || {};
       return data;
     } catch (err) {
@@ -31,7 +30,7 @@ export const useUsers = () => {
 
   const addUsers = async (payload: Users) => {
     try {
-      const response = await axios.post(BASE_URL, payload);
+      const response = await axios.post(USERS_ENDPOINT_URL, payload);
       console.log(response);
     } catch (err) {
       console.log(`Error: ${err}`);

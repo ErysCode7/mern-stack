@@ -4,8 +4,8 @@
 
 html,
 body {
-  background-color: #030515;
-  color: #f8f4f4;
+  background-color: #f4f4f5;
+  color: black;
 }
 
 @layer components {
