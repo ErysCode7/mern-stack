@@ -3,7 +3,7 @@ import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import z from "zod";
 
-const Form: React.FC = () => {
+const FormComponent: React.FC = () => {
   const FormSchema = z
     .object({
       firstName: z
@@ -200,4 +200,4 @@ const Form: React.FC = () => {
   );
 };
 
-export default Form;
+export default FormComponent;

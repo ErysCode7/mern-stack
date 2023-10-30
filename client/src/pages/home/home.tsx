@@ -1,11 +1,11 @@
-import { Form } from "@/components/form";
+import { Home } from "@/modules/home";
 import React from "react";
 
 const HomePage: React.FC = () => {
   return (
-    <main className="page-layout !h-[calc(100vh_-_80px)]">
-      <Form />
-    </main>
+    <>
+      <Home />
+    </>
   );
 };
 
